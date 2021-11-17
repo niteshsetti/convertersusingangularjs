@@ -5,7 +5,7 @@
         <script src="angular.min.js"></script>
     </head>
     <style>
-        input{
+        input,select{
             width:200px;
             height:50px;
             text-align:center;
@@ -41,7 +41,15 @@
        }
     </style>
     <body ng-app="" >
-       <center><h2>Converters Using Angular-JS</h2></center>
+       <center><h2 ng-style="mystyle">Converters Using Angular-JS</h2>
+       <select ng-model="val">
+        <option selected hidden value="">Select Color</option>
+        <option value="red">Red</option>
+        <option value="blue">blue</option>
+        <option value="white">white</option>
+        </select>
+        <p ng-style="mystyle={color:val}"></p>
+        </center>
        <div class="a" ng-init="weight=1;num2=35.2739619">
         <center>
         <h3>Weight To ozu(Converter)</h3>
