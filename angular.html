@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weight Conversion</title>
+        <script src="angular.min.js"></script>
+    </head>
+    <style>
+        input{
+            width:200px;
+            height:50px;
+            text-align:center;
+        }
+        span{
+            font-size: 20px;
+        }
+       .a{
+           position: relative;
+           border: 1px solid black;
+           width:300px;
+           height:250px;
+           box-sizing: border-box;
+           display:inline-block;
+           margin-left:5em;
+           margin-top:2em;
+           background-color:white;
+           border: none;
+
+       }
+       center{
+           margin-top:0.5em;
+           margin-left:0.5em;
+           
+       }
+       body{
+           background-color:violet;
+           font-family: sans-serif;
+           font-style: italic;
+       }
+       h2{
+           color:white;
+       }
+    </style>
+    <body ng-app="" >
+       <center><h2>Converters Using Angular-JS</h2></center>
+       <div class="a" ng-init="weight=1;num2=35.2739619">
+        <center>
+        <h3>Weight To ozu(Converter)</h3>
+        <input type="number" placeholder="Enter Weight number" ng-model="weight"></br></br>
+        <input type="number"  ng-model="weight*num2">
+        </center>
+       </div>
+       <div class="a"  ng-init="ms=1;kh=3.6">
+        <center>
+        <h3>Meter To Kilometer(Converter)</h3>
+        <input type="number" placeholder="Enter Speed Number" ng-model="ms"></br></br>
+        <input type="number"  ng-model="ms*kh">
+        </center>
+       </div>
+       <div class="a"  ng-init="cm=1;m=0.01">
+        <center>
+        <h3>Centimeter To meter(Converter)</h3>
+        <input type="number" placeholder="Enter Centimeter Number" ng-model="cm"></br></br>
+        <input type="number"  ng-model="cm/100">
+        </center>
+       </div>
+       <div class="a"  ng-init="cu=1;hec=10">
+        <center>
+        <h3>CubicTo hecoliter(Converter)</h3>
+        <input type="number" placeholder="Enter Your Number" ng-model="cu"></br></br>
+        <input type="number"  ng-model="cu*hec">
+        </center>
+       </div>
+       <div class="a"  ng-init="l=1;ml=1000">
+        <center>
+        <h3>Litre To Millilitre(Converter)</h3>
+        <input type="number" placeholder="Enter Your Number" ng-model="l"></br></br>
+        <input type="number"  ng-model="l*ml">
+        </center>
+       </div>
+       <div class="a"  ng-init="li=1;cli=100">
+        <center>
+        <h3>Liter To Centilitre(Converter)</h3>
+        <input type="number" placeholder="Enter Your Number" ng-model="li"></br></br>
+        <input type="number"  ng-model="li*cli">
+        </center>
+       </div>
+       <div class="a"  ng-init="body=1;height=1">
+        <center>
+        <h3>BMI(Converter)</h3>
+        <input type="number" placeholder="Enter Weight Number" ng-model="body"></br></br>
+        <input type="number" placeholder="Enter Height Number" ng-model="height">
+        <h3>The BMI IS : {{body/(height/100*height/100)}} Kg/m<sup>2</sup></h3>
+        </center>
+       </div>
+    </body>
+</html>
